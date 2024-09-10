@@ -12,7 +12,7 @@ services:
     volumes:
       - postgres-kc-data:/var/lib/postgres/data
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   keycloak:
     image: quay.io/keycloak/keycloak:24.0.2
@@ -33,7 +33,7 @@ services:
     volumes:
       - kc-data:/opt/jboss/keycloak/standalone/data
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-class:
     image: mongo
@@ -49,7 +49,7 @@ services:
     volumes:
       - mongo-class-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-student:
     image: mongo
@@ -63,7 +63,7 @@ services:
     volumes:
       - mongo-student-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-professor:
     image: mongo
@@ -79,7 +79,7 @@ services:
     volumes:
       - mongo-professor-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-course:
     image: mongo
@@ -95,7 +95,7 @@ services:
     volumes:
       - mongo-course-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-time-table:
     image: mongo
@@ -111,7 +111,7 @@ services:
     volumes:
       - mongo-time-table-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongodb-report-card:
     image: mongo
@@ -127,7 +127,7 @@ services:
     volumes:
       - mongo-report-card-data:/data/db
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-class:
     image: mongo-express
@@ -142,7 +142,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-student:
     image: mongo-express
@@ -155,7 +155,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-professor:
     image: mongo-express
@@ -170,7 +170,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-course:
     image: mongo-express
@@ -185,7 +185,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-time-table:
     image: mongo-express
@@ -200,7 +200,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
   mongo-express-report-card:
     image: mongo-express
@@ -215,10 +215,10 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: root
       ME_CONFIG_BASICAUTH_PASSWORD: 1234
     networks:
-      - school-flow-networks
+      - lakilasy-networks
 
 networks:
-  school-flow-networks:
+  lakilasy-networks:
     driver: bridge
 
 volumes:
