@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { StudentComponent } from './pages/student/student.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { StudentComponent } from './pages/student/student.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
     NgbModule
   ],
   providers: [],

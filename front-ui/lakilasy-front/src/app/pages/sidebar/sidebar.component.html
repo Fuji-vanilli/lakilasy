@@ -1,1 +1,95 @@
-<p>sidebar works!</p>
+<div class="contain">
+    <div id="sidebar">
+        <button class="btn menu-btn" id="toggle-btn">
+            <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+        </button>
+        <div class="head">
+            <div class="user-img">
+                <img src="../../../assets/city-school-building-study-learning-education-vector-illustration-2GXTK4Y.jpg" alt="">
+            </div>
+            <div class="user-details">
+                <p class="name">Lycée</p>
+                <p class="title">Le Major</p>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <p class="title">Principal</p>
+                <ul>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'gauge']"></fa-icon>
+                            <span class="text">Tableau de bord</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/class" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'school-flag']"></fa-icon>
+                            <span class="text">Classe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/student" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'book-open-reader']"></fa-icon>
+                            <span class="text">Etudiants</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/professor" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
+                            <span class="text">Professeurs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/time-table" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'calendar-days']"></fa-icon>
+                            <span class="text">Emploi du temps</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="title">Paiement</p>
+                <ul>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/ecolage" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'money-check-dollar']"></fa-icon>
+                            <span class="text">Ecolage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/salary" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'wallet']"></fa-icon>
+                            <span class="text">Salaire</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="title">Etudes</p>
+                <ul>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/note" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'book']"></fa-icon>
+                            <span class="text">Bulletin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLinkActive="active" routerLink="/admin/class-concil" [routerLinkActiveOptions]="{exact: true}">
+                            <fa-icon [icon]="['fas', 'gavel']"></fa-icon>
+                            <span class="text">Conseil de classe</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <span style="color: #cccbc8; font-size: 10px; margin-left: 20px;">© Created by Fuji Vanilli</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="home">
+        <router-outlet></router-outlet>
+    </section>
+    
+</div>

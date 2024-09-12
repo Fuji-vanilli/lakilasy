@@ -4,7 +4,7 @@ import {
   faAngleRight,
   faAnglesRight,
   faBook,
-  faBookOpenReader,
+  faBookOpenReader, 
   faCalendarDays,
   faCamera,
   faCartPlus,
